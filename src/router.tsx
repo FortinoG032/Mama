@@ -10,7 +10,9 @@ export const getRouter = () => {
     context: { queryClient },
     scrollRestoration: true,
     defaultPreloadStaleTime: 0,
+    basepath: process.env.GITHUB_PAGES ? "/Mama" : undefined,
   });
 
   return router;
 };
+
